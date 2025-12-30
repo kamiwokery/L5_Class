@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ЛР5: Классы и модули - Корзина покупок</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            line-height: 1.6;
+        }
+        h1 {
+            color: #333;
+        }
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        pre {
+            background-color: #f5f5f5;
+            padding: 15px;
+            border-radius: 5px;
+            overflow: auto;
+            border-left: 4px solid #4CAF50;
+        }
+    </style>
+</head>
+<body>
+    <h1>Лабораторная работа 5: Классы и модули</h1>
+    <h2>Тема: "Корзина покупок" (номер 15)</h2>
+    
+    <p>Открой консоль разработчика (F12) для просмотра результатов</p>
+    
+    <div>
+        <button onclick="runDemo()">Запустить демонстрацию</button>
+        <button onclick="clearConsole()">Очистить консоль</button>
+    </div>
+    
+    <div>
+        <h3>Файлы проекта:</h3>
+        <ul>
+            <li><code>ShoppingCart.js</code> - родительский класс</li>
+            <li><code>OnlineShoppingCart.js</code> - дочерний класс</li>
+            <li><code>index.js</code> - основной скрипт</li>
+            <li><code>index.html</code> - эта страница</li>
+        </ul>
+    </div>
+    
+    <div>
+        <h3>Что происходит в коде:</h3>
+        <pre>
+1. Созданы 2 экземпляра класса OnlineShoppingCart
+2. Каждый имеет разное содержимое и адрес доставки
+3. Вызываются методы show(), addItem(), applyDiscount()
+4. Демонстрируется клонирование через static clone()
+5. Показывается разница между copy() и clone()
+        </pre>
+    </div>
+    
+    <!-- Подключаем основной скрипт как модуль -->
+    <script type="module" src="index.js"></script>
+    
+    <script>
+        function runDemo() {
+            console.clear();
+            console.log('=== ПОВТОРНЫЙ ЗАПУСК ДЕМОНСТРАЦИИ ===');
+            
+            // Можно перезапустить импортированный код
+            // или просто показать сообщение
+            alert('Результаты уже показаны в консоли. Нажми F12 для просмотра.');
+        }
+        
+        function clearConsole() {
+            console.clear();
+            console.log('Консоль очищена');
+        }
+    </script>
+</body>
+</html>
